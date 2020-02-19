@@ -1,0 +1,76 @@
+/*
+	Задаем стиль кнопок для переключения
+*/
+button.button_toggle:disabled
+{
+	background-color: transparent!important;
+	border-color: transparent!important;
+    color: grey!important;
+	outline: 0px;
+}
+.button_toggle
+{
+	border-color: red!important;
+    color: red!important;
+	outline: 0px;
+}
+.button_toggle:focus
+{
+	outline: 0px;
+}
+button.button_toggle_disabled
+{
+	background-color: transparent!important;
+	border-color: transparent!important;
+    color: grey!important;
+	outline: 0px;
+}
+.button_toggle:hover
+{
+	/*Наведение*/
+	background-color: grey!important;
+    color: white!important;
+}
+/*
+	div.ToggleAppletOUI - наш класс, добавленный в js для определения нужного апплета
+*/
+div.ToggleAppletOUI span.ui-jqgrid-resize
+{
+	/*Обесцвечиваем разделитель колонок*/
+	background-color: transparent!important;
+}
+div.ToggleAppletOUI span.siebui-icon-bttns_less::before
+{
+	/*Меняем кнопку уменьшения количества отобржаемых записей на апплете*/
+	content: "\e907"!important;
+	color: grey !important;
+	font-size: 25px !important;
+}
+div.ToggleAppletOUI span.siebui-icon-bttns_more::before
+{
+	/*Меняем кнопку увелечения количсетва отобржаемых записей на апплете*/
+	content: "\e905"!important;
+	color: grey !important;
+	font-size: 25px !important;
+}
+/*
+	Скрываем не нужное на апплете
+*/
+div.ToggleAppletOUI span.miniBtnUIC
+{
+	display: none;
+}
+div.ToggleAppletOUI table.ui-pg-table table.ui-pg-table
+{
+	display: none;
+}
+div.ToggleAppletOUI span.siebui-popup-togglebar
+{
+	display: none;
+}
+div.ToggleAppletOUI button[data-display="New"]
+{
+	background-color: #eee;
+	border-color: grey;
+	border-radius: 50%;
+}
