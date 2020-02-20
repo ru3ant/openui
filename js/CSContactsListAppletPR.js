@@ -43,9 +43,10 @@ if (typeof(SiebelAppFacade.CSContactsListAppletPR) === "undefined")
 							tg1.addClass("button_toggle");
 							// Нажатие
 							tg1.click(function(){
+								tg1.addClass("button_toggle_disabled");
 								tg2.removeClass("button_toggle_disabled");
-								tg1.attr("disabled","true");
-								tg2.removeAttr("disabled");
+								//tg1.attr("disabled","true");
+								//tg2.removeAttr("disabled");
 								// колдуем с колонками при нажатии
 								GR.jqGrid("showCol","Phone");
 								GR.hideCol(["Street_Address","City","State","Country","Postal_Code","Type"]);
@@ -61,7 +62,8 @@ if (typeof(SiebelAppFacade.CSContactsListAppletPR) === "undefined")
 							// Нажатие
 							tg2.click(function(){
 								tg2.attr("disabled","true");
-								tg1.removeAttr("disabled");
+								//tg1.removeAttr("disabled");
+								tg1.removeClass("button_toggle_disabled");
 								// колдуем с колонками при нажатии
 								GR.jqGrid("hideCol","Phone");
 								GR.jqGrid("showCol",["Street_Address","City","State","Country","Postal_Code","Type"]);
